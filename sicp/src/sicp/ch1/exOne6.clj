@@ -1,4 +1,4 @@
-(ns ch1.exOne5
+(ns ch1.exOne6
     (:use [clojure.repl])
     (:gen-class))
 
@@ -23,3 +23,5 @@
 (defn square-user [x]
     (* x x))
 
+;;For this question,the new-if can cause even more recurences which
+;;will finally lead to stack overflow 

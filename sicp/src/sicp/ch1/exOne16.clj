@@ -30,3 +30,14 @@
 (defn even? [n]
     (= (remainder n 2) 0))
 ;;yields to \Theta(\logn)
+
+(defn fast-expt2 [b n]
+    (fast-iter 1 b n))
+
+(defn fast-iter [product b n]
+    (cond (= n 0) product
+        (even? n) (fast-iter product (square b) (/ n 2))
+        :else (fast-iter (* product b) b (- n 1))))
+;;这里的迭代类似与尾递归，它的计算过程是迭代的，但该过程本身是递归的
+;;product是一个状态变量，在状态转换的时候ab^n的值保持不变，当然a,b,n
+;;是变量

@@ -14,3 +14,8 @@
 
 (defn user-double [a]
     (* a 2))
+
+(defn new-multi2 [a b]
+    (if odd? b
+        (+ a (new-multi a (- b 1)))
+        (new-multi (user-double a) (user-halve b))))

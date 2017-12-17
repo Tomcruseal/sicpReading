@@ -16,3 +16,19 @@
 (defn sum-integers [a b]
     (sum-cus identity a inc b))
 
+;;this will yield a (1/8)*\pi as x \leftarrow \inf
+(defn pi-sum [a b]
+    (defn pi-term [x]
+        (/ 1.0 (* x (+ x 2))))
+    (defn pi-next [x]
+        (+ x 4))
+    (sum-cus pi-term a pi-next b))
+
+;;integral approaximation
+(defn integral-cus [f a b dx]
+    (defn add-dx [x] (+ x dx))
+    (* (sum-cus f (+ a (/ dx 2.0)) add-dx b)
+        dx))
+
+
+

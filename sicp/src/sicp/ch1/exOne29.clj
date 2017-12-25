@@ -30,5 +30,8 @@
     (* (sum-cus f (+ a (/ dx 2.0)) add-dx b)
         dx))
 
-
+;;below is simpson method
+(defn integral-simpson [f a b n]
+    (defn is-term [k]
+        if (even? k) ))
 

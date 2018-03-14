@@ -5,6 +5,6 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]]
   ;:main ^:skip-aot sicp.core
-  :source-paths ["src" "src/sicp/ch1"]
+  :source-paths ["src" "src/sicp/ch1" "src/sicp/ch2"]
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
